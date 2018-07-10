@@ -73,7 +73,7 @@ body {
 
 
 
-@media (max-width: 400px) 
+@media (max-width: 550px) 
 {
     .fly-in-text li {
         font-size: 2em;
