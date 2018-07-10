@@ -77,21 +77,21 @@ $('.time').mouseout(function() {
 $('.one').click(function() {
     $('body').fadeOut(2000, newpage);
     function newpage() {
-        window.location.href = 'page2.html';
+        window.location.href = 'about_me.html';
     }
 })
 
 $('.two').click(function() {
     $('body').fadeOut(2000, newpage);
     function newpage() {
-        window.location.href = 'page3.html';
+        window.location.href = 'skills.html';
     }
 })
 
 $('.three').click(function() {
     $('body').fadeOut(2000, newpage);
     function newpage() {
-        window.location.href = 'page5.html';
+        window.location.href = 'experiences.html';
     }
 })
 

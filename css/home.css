@@ -654,7 +654,7 @@ h1 {
     .social {
         margin: 0 40px;
         top: 10px;
-        left: 9cm;
+        left: 7cm;
     }
 
     .social li:nth-child(1) {
@@ -679,7 +679,7 @@ h1 {
     }
 }
 
-@media (max-width: 480px)
+@media (max-width: 550px)
 {
     #wh {
         font-size: 20px;
@@ -688,7 +688,7 @@ h1 {
     .social {
         /* margin: 0 40px; */
         top: 10px;
-        left: 7cm;
+        left: 6cm;
     }
 
     .social li:nth-child(1) {
