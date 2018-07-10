@@ -1,0 +1,441 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+
+.container {
+    margin: 3cm auto;
+}
+
+
+
+/* ------------------------------- DRAGGABLE BUTTON -------------------------------- */
+
+.share {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: rotate(45deg) ;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    z-index: 9;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #17c13e;
+    overflow: hidden;
+    /* transform: scale(0.95); */
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+    transition: .5s;
+    opacity: .5;
+}
+
+.toggle:hover {
+    opacity: 1;
+}
+
+.toggle::before {
+    content: '\f1e0';
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    transform: rotate(-45deg);
+}
+
+.toggle.active::before {
+    content: '\f00d';
+}
+
+.share ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.share ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: .5s;
+    overflow: hidden;
+    transform: scale(0.95);
+    border-radius: 10px;
+    transform: scale(0);
+}
+
+.share ul.active li {
+    transform: scale(0.95);
+}
+
+.share ul li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: black;
+}
+
+.share ul li a .fa {
+    transform: rotate(-45deg);
+}
+
+.share ul li a:hover {
+    color: white;
+    background: #2169f3;
+}
+
+.share ul.active li:nth-child(1) {
+    top: -100%;
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.share ul.active li:nth-child(2) {
+    top: -100%;
+    left: 0;
+    transition-delay: 0.2s;
+}
+
+.share ul.active li:nth-child(3) {
+    top: -100%;
+    left: 100%;
+    transition-delay: 0.4s;
+}
+
+.share ul.active li:nth-child(4) {
+    top: 0;
+    left: 100%;
+    transition-delay: 0.6s;
+}
+
+.share ul.active li:nth-child(5) {
+    top: 100%;
+    left: 100%;
+    transition-delay: 0.8s;
+}
+
+.share ul.active li:nth-child(6) {
+    top: 100%;
+    left: 0;
+    transition-delay: 1s;
+}
+
+.share ul.active li:nth-child(7) {
+    top: 100%;
+    left: -100%;
+    transition-delay: 1.2s;
+}
+
+.share ul.active li:nth-child(8) {
+    top: 0;
+    left: -100%;
+    transition-delay: 1.4s;
+}
+
+
+
+/* --------------------------------------- SECTION 1 ------------------------------ */
+
+.section1 {
+    margin: 0;
+    height: 400px;
+    width: 1000px;
+    background: #000;
+    box-shadow: 0 25px 30px rgba(0, 0, 0, .5);
+    display: flex;
+}
+
+.content {
+    width: calc(50% - 50px);
+    height: 100%;
+    background: #000;
+    box-sizing: border-box;
+    /* border-top: 400px solid transparent; */
+
+    color: white;
+    padding: 3em;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.subcontent {
+    width: calc(50% + 50px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    border-left: 100px solid #000;
+    border-bottom: 400px solid transparent;
+    cursor: crosshair;
+    
+    background-image: url('../image/autumn.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 350px 0px;
+    background-size: contain;
+}
+
+
+
+/* --------------------------------------- SECTION 2 ------------------------------ */
+
+.section2 {
+    margin: 0;
+    height: 400px;
+    width: 1000px;
+    background: #000;
+    box-shadow: 0 25px 30px rgba(0, 0, 0, .5);
+    display: flex;
+}
+
+.content2 {
+    width: calc(50% + 0px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    border-top: 400px solid transparent;
+    border-right: 100px solid black;
+
+    background-image: url('../image/autumn.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: -50px 0px;
+    background-size: contain;
+    cursor: crosshair;
+}
+
+.subcontent2 {
+    width: calc(50% + 130px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    /* border-bottom: 400px solid cadetblue; */
+
+    color: white;
+    padding: 2em;
+    font-size: 15px;
+    text-align: right;
+}
+
+
+
+/* --------------------------------------- SECTION 3 ------------------------------ */
+
+.section3 {
+    margin: 0;
+    height: 400px;
+    width: 1000px;
+    background: #000;
+    box-shadow: 0 25px 30px rgba(0, 0, 0, .5);
+    display: flex;
+}
+
+.content3 {
+    width: calc(50% + 50px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    /* border-bottom: 400px solid transparent; */
+
+    color: white;
+    padding: 2em;
+    font-size: 15px;
+    text-align: center;
+}
+
+.subcontent3 {
+    width: calc(50% + 420px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    border-top: 400px solid transparent;
+    border-left: 180px solid black;
+
+    background-image: url('../image/autumn.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 350px 0px;
+    background-size: contain;
+    cursor: crosshair;
+}
+
+
+
+/* --------------------------------------- SECTION 4 ------------------------------ */
+.section4 {
+    margin: 0;
+    height: 400px;
+    width: 1000px;
+    background: #000;
+    box-shadow: 0 25px 30px rgba(0, 0, 0, .5);
+    display: flex;
+}
+
+.content4 {
+    width: calc(50% + 350px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    border-top: 400px solid transparent;
+    border-right: 189px solid black;
+
+    background-image: url('../image/autumn.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: -50px 0px; */
+    background-position: right;
+    background-size: cover;
+    cursor: crosshair;
+}
+
+.subcontent4 {
+    width: calc(50% + 420px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    /* border-bottom: 400px solid transparent; */
+
+    color: white;
+    padding-left: 2em;
+    padding-top: 5em;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+/* --------------------------------------- SECTION 5 ------------------------------ */
+.section5 {
+    margin: 0;
+    height: 400px;
+    width: 1000px;
+    background: black;
+    box-shadow: 0 25px 30px rgba(0, 0, 0, .5);
+    display: flex;
+}
+
+.content5 {
+    width: calc(50% - 160px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    /* border-top: 400px solid transparent; */
+
+    color: white;
+    padding-top: 6em;
+    padding-left: 2em;
+    font-size: 15px;
+    text-align: center;
+}
+
+.subcontent5 {
+    width: calc(50% + 160px);
+    height: 100%;
+    background: black;
+    box-sizing: border-box;
+    border-top: 400px solid transparent;
+    border-left: 100px solid black;
+    cursor: crosshair;
+
+    background-image: url('../image/autumn.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+
+
+/* ================================== MEDIA QUERY ==================================== */
+
+@media(max-width: 900px) {
+    .subcontent, .content2, .subcontent3,
+    .content4, .subcontent5 {
+        display: none;
+    }
+
+    .content, .subcontent2, .content3,
+    .subcontent4, .content5 {
+        width: 100%;
+        font-size: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+    .content h2, .subcontent2 h3, .content3 h3,
+    .subcontent4 h3, .content5 h4 {
+        font-size: 15px;
+    }
+
+    .section1, .section2, .section3, 
+    .section4, .section5 {
+        width: auto;
+        padding-top: 3em;
+        margin: 0;
+        height: 200px;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+}
+
+
+@media(max-width: 480px) {
+    .subcontent, .content2, .subcontent3,
+    .content4, .subcontent5 {
+        display: none;
+    }
+
+    .content, .subcontent2, .content3,
+    .subcontent4, .content5 {
+        width: 100%;
+        font-size: 8px;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+    .content h2, .subcontent2 h3, .content3 h3,
+    .subcontent4 h3, .content5 h4 {
+        font-size: 12px;
+    }
+
+    .section1, .section2, .section3, 
+    .section4, .section5 {
+        width: auto;
+        padding-top: 3em;
+        margin: 0;
+        height: 200px;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+}

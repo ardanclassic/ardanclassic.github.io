@@ -1,0 +1,374 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: black;
+}
+
+
+
+/* ------------------------------- DRAGGABLE BUTTON -------------------------------- */
+
+.share {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: rotate(45deg) ;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    z-index: 9;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #17c13e;
+    overflow: hidden;
+    /* transform: scale(0.95); */
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+    transition: .5s;
+    opacity: .5;
+}
+
+.toggle:hover {
+    opacity: 1;
+}
+
+.toggle::before {
+    content: '\f1e0';
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    transform: rotate(-45deg);
+}
+
+.toggle.active::before {
+    content: '\f00d';
+}
+
+.share ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.share ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: .5s;
+    overflow: hidden;
+    transform: scale(0.95);
+    border-radius: 10px;
+    transform: scale(0);
+}
+
+.share ul.active li {
+    transform: scale(0.95);
+}
+
+.share ul li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: black;
+}
+
+.share ul li a .fa {
+    transform: rotate(-45deg);
+}
+
+.share ul li a:hover {
+    color: white;
+    background: #2169f3;
+}
+
+.share ul.active li:nth-child(1) {
+    top: -100%;
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.share ul.active li:nth-child(2) {
+    top: -100%;
+    left: 0;
+    transition-delay: 0.2s;
+}
+
+.share ul.active li:nth-child(3) {
+    top: -100%;
+    left: 100%;
+    transition-delay: 0.4s;
+}
+
+.share ul.active li:nth-child(4) {
+    top: 0;
+    left: 100%;
+    transition-delay: 0.6s;
+}
+
+.share ul.active li:nth-child(5) {
+    top: 100%;
+    left: 100%;
+    transition-delay: 0.8s;
+}
+
+.share ul.active li:nth-child(6) {
+    top: 100%;
+    left: 0;
+    transition-delay: 1s;
+}
+
+.share ul.active li:nth-child(7) {
+    top: 100%;
+    left: -100%;
+    transition-delay: 1.2s;
+}
+
+.share ul.active li:nth-child(8) {
+    top: 0;
+    left: -100%;
+    transition-delay: 1.4s;
+}
+
+
+
+
+/* ---------------------------------------- MODAL 1 --------------------------------------- */
+
+@media (min-width : 1000px) 
+{
+    .dialog1 
+    {
+        max-width: 1175px;
+    } 
+}
+
+
+/* ---------------------------------------- MODAL 2 --------------------------------------- */
+
+.modal-subcontent {
+    width: 40%;
+    margin: 1em;
+    background: #1c3e5a;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 16px;
+    color: lightsteelblue;
+}
+
+.modal-img2 {
+    position: relative;
+    left: 15px;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+
+
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 500px;
+    display: flex;
+}
+
+.container .box {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    background: black;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.container .box:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 1) ;
+}
+
+.container .box .thumb {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.container .box .thumb img {
+    width: 105%;
+}
+
+.container .box .details {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #262626;
+    border-radius: 10px;
+}
+
+
+.container .box:nth-child(odd) .thumb {
+    bottom: 0;
+    left: 0;
+}
+
+.container .box:nth-child(even) .details {
+    bottom: 0;
+    left: 0;
+}
+
+
+.container .box:nth-child(1) .details {
+    background: crimson;
+}
+
+.container .box:nth-child(2) .details {
+    background: steelblue;
+}
+
+.container .box:nth-child(3) .details {
+    background: seagreen;
+}
+
+.container .box:nth-child(4) .details {
+    background: lightslategray;
+}
+
+
+.container .box .details .content {
+    position: absolute;
+    top: calc(50% + 16px);
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: .5s;
+}
+
+.container .box:hover .details .content {
+    top: 50%;
+}
+
+.container .box .details .content .fa {
+    font-size: 80px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.container .box .details .content h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: white;
+}
+
+.container .box .details .content a {
+    display: inline-block;
+    padding: 5px 20px;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    transition: .5s;
+    transform: scale(0);
+    font-weight: bold;
+}
+
+.container .box .details .content a:hover {
+    color: black;
+}
+
+.container .box:hover .details .content a {
+    transform: scale(1);
+}
+
+
+/* -----------------------------  RESOLUTION CUSTOMIZATION --------------------------- */
+
+@media (max-width: 1000px) 
+{
+    .container
+    {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .container .box {
+        height: 250px;
+    }
+
+    .container .box .thumb {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) 
+{
+    .container
+    {
+        display: initial;
+        top: 20em;
+    }
+
+    .container .box {
+        width: 50%;
+        height: 250px;
+        float: left;
+    }
+}
+
+
+@media (max-width: 480px) 
+{
+    .container
+    {
+        top: 0;
+        left: 0;
+        transform: translate(0)
+    }
+
+    .container .box {
+        width: 100%;
+        height: 250px;
+        float: none;
+    }
+}

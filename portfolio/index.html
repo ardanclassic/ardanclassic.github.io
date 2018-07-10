@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/intro.css">
+
+    <title>Intro</title>
+</head>
+
+
+<body>
+
+    <!-- ----------------------------------- FADE SCRIPT -------------------------------------- -->
+        <script>
+            $('body').css('display', 'none');
+            $('document').ready(function(){
+                $('body').fadeIn();
+                $('a').on('click', function(event){
+                    var target = this.getAttribute('target');
+                    if (target != '_blank') {
+                        var href = this.getAttribute('href');
+                        event.preventDefault();
+                        $('body').fadeOut(function(){
+                            window.location = href;
+                        });
+                    }
+                });
+            })
+
+        </script>
+
+    <div class="welcome-section content-hidden">
+        <div class="content-wrap">
+            <ul class="fly-in-text">
+                <li>I</li>
+                <li>N</li>
+                <li>T</li>
+                <li>R</li>
+                <li>O</li>
+            </ul>
+            <a href="page4.html" class="enter-button">E N T E R</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+    $(function(){
+        var welcomeSection = $('.welcome-section'),
+            enterButton = welcomeSection.find('.enter-button');
+
+        setTimeout(function(){
+            welcomeSection.removeClass('content-hidden');
+        }, 1000);
+
+        enterButton.on('click', function(e){
+            e.preventDefault();
+            welcomeSection.addClass('content-hidden').fadeOut();
+            location.href = this.href; // goes to link
+        });
+    })
+</script>

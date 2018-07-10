@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/page4.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <title>ardanclassic</title>
+</head>
+
+
+<body>
+
+    <!-- ----------------------------------- FADE SCRIPT -------------------------------------- -->
+    <script>
+        
+        $('body').css('display', 'none');
+        $(document).ready(function() {
+            $('body').fadeIn(2000);
+
+            $('a').click(function() {
+                var id = this.getAttribute('id');
+                var $class = this.getAttribute('class');
+                if ($class != 'unlink'){
+                    event.preventDefault();
+                    newLocation = this.href;
+                    $('body').fadeOut(2000, newpage);
+                    function newpage() {
+                        window.location = newLocation;
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    <!-- ---------------------------------- LANDING PAGE -------------------------------------- -->
+    <div class="container landing">
+    </div>
+
+
+    <!-- ---------------------------------- JUMBOTRON -------------------------------------- -->
+    <div class="container jumbotron">
+        Assalamu'alaikum
+    </div>
+
+
+    <!-- ---------------------------------- BUTTON -------------------------------------- -->
+    <div class="share draggable">
+        <div class="toggle"></div>
+        <ul>
+            <li><a href="index.html"><i class="fa fa-sign-in"></i></a></li>
+            <li><a href="page2.html"><i class="fa fa-user"></i></a></li>
+            <li><a href="page4.html"><i class="fa fa-home"></i></a></li>
+            <li><a class="unlink" href="#"></a></li>
+            <li><a class="unlink" href="#"></a></li>
+            <li><a class="unlink" href="#"></a></li>
+            <li><a href="page5.html"><i class="fa fa-binoculars"></i></a></li>
+            <li><a href="page3.html"><i class="fa fa-book"></i></a></li>
+        </ul>
+    </div>
+
+
+    <!-- ---------------------------------- MAIN SECTION -------------------------------------- -->
+    <div class="timeline">
+        <ul>
+            <li>
+                <div class="content">
+                    <h3>Who am I ?</h3>
+                    <p><br>
+                        “Verily, when a person starts praising <br> himself,
+                            then his honor will leave him.” <br><br>
+                        <i>- Malik bin Anas rahimahullah</i>
+                    </p>
+                </div>
+                <div class="time one">
+                    <h4>Channel #1</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h3>Do I have some skills ?</h3>
+                    <p><br>
+                        “A little action with knowledge is far more <br> beneficial than a lot of action with ignorance.” <br><br>
+                        <i> – Nu'man bin Tsabit rahimahullah </i>
+                    </p>
+                </div>
+                <div class="time two">
+                    <h4>Channel #2</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h3>What about my experiences ?</h3>
+                    <p><br>
+                        All humans are dead except those who have knowledge, <br> 
+                        and all those who have knowledge are asleep, <br> 
+                        except those who do good deeds, <br> 
+                        and those who do good deeds are deceived, <br> 
+                        except those who are sincere, <br> 
+                        and those who are sincere are always in a state of worry. <br><br>
+                        <i> – Muhammad bin Idris Asy Syafi'i rahimahullah </i>
+                    </p>
+                </div>
+                <div class="time three">
+                    <h4>Channel #3</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h3>Coming Soon . . .</h3>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae et debitis facere, accusamus dolores id iste, totam error consequuntur nostrum enim temporibus? Quaerat at repellendus similique exercitationem possimus obcaecati. Rerum?</p> -->
+                </div>
+                <div class="time four">
+                    <h4>Channel #4</h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- ---------------------------------- SOCIAL MEDIA -------------------------------------- -->
+    <div class="container">
+        <div class="section-2">
+            <ul class="social">
+                <li>
+                    <a href="https://www.facebook.com/ardan.classic"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/ardanclassic"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/u/0/114276519765029395542"><i class="fa fa-google-plus"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ardan-classic-9938a8162/"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/ardanclassic/"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- ----------------------------------- GOOGLE MAPS -------------------------------------- -->
+    <div class="container">
+        <center><h1 id="wh">Where is my home ???</h1></center>
+        <div id="map"></div>
+    </div>
+
+    <!-- // -------- Google Maps ---------- // -->
+    <script>
+        function initMap(){
+            var location = {lat: -8.17950599, lng:113.71392575 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location,
+            })
+            var marker = new google.maps.Marker({
+                position : location,
+                map : map,
+            })
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUC0Heu7sOSeSDDHtEvVbfdpHblIQGRPA&callback=initMap" ></script>
+
+
+</body>
+
+</html>
+
+<script src="js/page4.js"></script>
+

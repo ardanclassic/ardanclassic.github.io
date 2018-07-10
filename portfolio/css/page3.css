@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+/* ------------------------------- DRAGGABLE BUTTON -------------------------------- */
+
+.share {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: rotate(45deg) ;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    z-index: 9;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #17c13e;
+    overflow: hidden;
+    /* transform: scale(0.95); */
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+    transition: .5s;
+    opacity: .5;
+}
+
+.toggle:hover {
+    opacity: 1;
+}
+
+.toggle::before {
+    content: '\f1e0';
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    transform: rotate(-45deg);
+}
+
+.toggle.active::before {
+    content: '\f00d';
+}
+
+.share ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.share ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: .5s;
+    overflow: hidden;
+    transform: scale(0.95);
+    border-radius: 10px;
+    transform: scale(0);
+}
+
+.share ul.active li {
+    transform: scale(0.95);
+}
+
+.share ul li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: black;
+}
+
+.share ul li a .fa {
+    transform: rotate(-45deg);
+}
+
+.share ul li a:hover {
+    color: white;
+    background: #2169f3;
+}
+
+.share ul.active li:nth-child(1) {
+    top: -100%;
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.share ul.active li:nth-child(2) {
+    top: -100%;
+    left: 0;
+    transition-delay: 0.2s;
+}
+
+.share ul.active li:nth-child(3) {
+    top: -100%;
+    left: 100%;
+    transition-delay: 0.4s;
+}
+
+.share ul.active li:nth-child(4) {
+    top: 0;
+    left: 100%;
+    transition-delay: 0.6s;
+}
+
+.share ul.active li:nth-child(5) {
+    top: 100%;
+    left: 100%;
+    transition-delay: 0.8s;
+}
+
+.share ul.active li:nth-child(6) {
+    top: 100%;
+    left: 0;
+    transition-delay: 1s;
+}
+
+.share ul.active li:nth-child(7) {
+    top: 100%;
+    left: -100%;
+    transition-delay: 1.2s;
+}
+
+.share ul.active li:nth-child(8) {
+    top: 0;
+    left: -100%;
+    transition-delay: 1.4s;
+}
+
+
+/* ---------------------------------------- GRID CONCEPT ----------------------------------- */
+
+#content {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(150px,auto);
+    grid-gap : 10px;
+    display: grid;
+    max-width: 960px;
+    margin: 20px;
+}
+
+#content .box {
+    background: #333;
+    border-radius: 10px;
+}
+
+.one {
+    grid-column: 1/3;
+    grid-row: 1/5;
+}
+
+.two {
+    grid-column: 3/7;
+    grid-row: 1/3;
+}
+
+.three {
+    grid-column: 3/5;
+    grid-row: 3/5;
+}
+
+.four {
+    grid-column: 5/7;
+    grid-row: 3/7;
+}
+
+.five {
+    grid-column: 1/5;
+    grid-row: 5/7;
+}
+
+
+.layer {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(0,0,0,0.7);
+}
+
+/* ------------------------------------- BOX ONE ------------------------------------------- */
+
+.gor1 {
+    background-image: url('../image/autumn.jpg');
+    width: auto;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+    transition: 1s;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#link1 {
+    text-decoration: none;
+}
+
+.one:hover .layer1 {
+    opacity: 1;
+}
+
+.layer1 {
+    
+    top: -630px;
+    left: 0px;
+    width: 313px;
+    height: 100%;
+}
+
+/* ----------------------------------- BOX TWO ------------------------------------- */
+
+.gor2 {
+    background-image: url('../image/autumn.jpg');
+    width: auto;
+    height: 100%;
+    position: relative;
+    top: -21px;
+    left: 0px;
+    border-radius: 10px;
+    transition: 1s;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.two:hover .layer2 {
+    opacity: 1;
+}
+
+.layer2 {
+    position: relative;
+    top: -331px;
+    left: 0px;
+    width: auto;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+
+/* ----------------------------------- BOX THREE ------------------------------------- */
+
+.gor3 {
+    background-image: url('../image/autumn.jpg');
+    width: auto;
+    height: 100%;
+    position: relative;
+    top: -21px;
+    left: 0px;
+    border-radius: 10px;
+    transition: 1s;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+.three:hover .layer3 {
+    opacity: 1;
+}
+
+.layer3 {
+    position: relative;
+    top: -331px;
+    left: 0px;
+    width: auto;
+    height: 100%;
+}
+
+
+
+/* ----------------------------------- BOX FOUR ------------------------------------- */
+
+.gor4 {
+    background-image: url('../image/autumn.jpg');
+    width: auto;
+    height: 100%;
+    position: relative;
+    top: -21px;
+    left: 0px;
+    border-radius: 10px;
+    transition: 1s;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+.four:hover .layer4 {
+    opacity: 1;
+}
+
+.layer4 {
+    position: relative;
+    top: -651px;
+    left: 0px;
+    width: auto;
+    height: 100%;
+}
+
+
+
+/* ----------------------------------- BOX FIVE ------------------------------------- */
+
+.gor5 {
+    background-image: url('../image/autumn.jpg');
+    width: auto;
+    height: 100%;
+    position: relative;
+    top: -21px;
+    left: 0px;
+    border-radius: 10px;
+    transition: 1s;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.five:hover .layer5 {
+    opacity: 1;
+}
+
+.layer5 {
+    position: relative;
+    top: -331px;
+    left: 0px;
+    width: auto;
+    height: 100%;
+}
