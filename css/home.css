@@ -38,7 +38,7 @@ body {
 }
 
 .toggle::before {
-    content: '\f1e0';
+    content: "\f013";
     font-family: fontAwesome;
     position: absolute;
     top: 0;
