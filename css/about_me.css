@@ -10,7 +10,7 @@ body {
 /* ------------------------------- DRAGGABLE BUTTON -------------------------------- */
 
 .share {
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 5%;
     transform: rotate(45deg) ;
