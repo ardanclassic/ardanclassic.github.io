@@ -44,7 +44,7 @@ body {
 }
 
 .toggle::before {
-    content: '\f1e0';
+    content: '\f015';
     font-family: fontAwesome;
     position: absolute;
     top: 0;

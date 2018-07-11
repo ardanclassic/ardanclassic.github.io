@@ -48,12 +48,11 @@
     </script>
 
 
-    <!-- ---------------------------------- BUTTON -------------------------------------- -->
-    <div class="share draggable">
-        <div class="toggle"></div>
-        <ul>
-            <li><a href="home.html"><i class="fa fa-home"></i></a></li>
-        </ul>
+    <!-- ------------------------------ DRAGGABLE BUTTON -------------------------------------- -->
+
+    <div class="share draggable" style="top: 35%;">
+        <div class="toggle">
+        </div>
     </div>
 
 
@@ -193,8 +192,10 @@
 <script>
     $(document).ready(function() {
         $('.toggle').dblclick(function () {
-            $('.toggle').toggleClass('active');
-            $('ul').toggleClass('active')
+            $('body').fadeOut(2000, newpage);
+            function newpage() {
+                window.location.href = 'home.html';
+            }
         })
         $('.draggable').draggable()
     })
