@@ -13,7 +13,7 @@ body {
 /* ------------------------------- DRAGGABLE BUTTON -------------------------------- */
 
 .share {
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 5%;
     transform: rotate(45deg) ;
@@ -116,48 +116,6 @@ body {
     transition-delay: 0s;
 }
 
-.share ul.active li:nth-child(2) {
-    top: -100%;
-    left: 0;
-    transition-delay: 0.2s;
-}
-
-.share ul.active li:nth-child(3) {
-    top: -100%;
-    left: 100%;
-    transition-delay: 0.4s;
-}
-
-.share ul.active li:nth-child(4) {
-    top: 0;
-    left: 100%;
-    transition-delay: 0.6s;
-}
-
-.share ul.active li:nth-child(5) {
-    top: 100%;
-    left: 100%;
-    transition-delay: 0.8s;
-}
-
-.share ul.active li:nth-child(6) {
-    top: 100%;
-    left: 0;
-    transition-delay: 1s;
-}
-
-.share ul.active li:nth-child(7) {
-    top: 100%;
-    left: -100%;
-    transition-delay: 1.2s;
-}
-
-.share ul.active li:nth-child(8) {
-    top: 0;
-    left: -100%;
-    transition-delay: 1.4s;
-}
-
 
 
 /* --------------------------------------- SECTION 1 ------------------------------ */
@@ -181,7 +139,7 @@ body {
     color: white;
     padding: 3em;
     font-size: 15px;
-    text-align: justify;
+    text-align: left;
 }
 
 .subcontent {
@@ -371,9 +329,16 @@ body {
 
 
 
+
+.timeline {
+    display: none;
+}
+
+
+
 /* ================================== MEDIA QUERY ==================================== */
 
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
     .subcontent, .content2, .subcontent3,
     .content4, .subcontent5 {
         display: none;
@@ -391,40 +356,6 @@ body {
     .content h2, .subcontent2 h3, .content3 h3,
     .subcontent4 h3, .content5 h4 {
         font-size: 15px;
-    }
-
-    .section1, .section2, .section3, 
-    .section4, .section5 {
-        width: auto;
-        padding-top: 3em;
-        margin: 0;
-        height: 200px;
-    }
-
-    .container {
-        margin: 0 auto;
-    }
-}
-
-
-@media(max-width: 480px) {
-    .subcontent, .content2, .subcontent3,
-    .content4, .subcontent5 {
-        display: none;
-    }
-
-    .content, .subcontent2, .content3,
-    .subcontent4, .content5 {
-        width: 100%;
-        font-size: 8px;
-        padding-top: 0;
-        padding-bottom: 0;
-        text-align: left;
-    }
-
-    .content h2, .subcontent2 h3, .content3 h3,
-    .subcontent4 h3, .content5 h4 {
-        font-size: 12px;
     }
 
     .section1, .section2, .section3, 
