@@ -681,14 +681,45 @@ h1 {
 
 @media (max-width: 550px)
 {
+    .timeline ul li:nth-child(odd), 
+    .timeline ul li:nth-child(even) {
+        top: 2cm;
+        margin-bottom: 1cm;
+    }
+
     #wh {
         font-size: 20px;
     }
 
+    .timeline ul {
+        margin-top: 50px;
+    }
+
+    .jumbotron {
+        margin: 0;
+        height: 1cm;
+    }
+
+    .share {
+        display: none;
+    }
+
+    .c-social {
+        width: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .section-2 {
+        width: 0px;
+        margin: 0px 0px;
+    }
+
     .social {
-        /* margin: 0 40px; */
+        margin: 0px;
         top: 10px;
-        left: 6cm;
+        left: -6em;
+        width: 0px;
     }
 
     .social li:nth-child(1) {
