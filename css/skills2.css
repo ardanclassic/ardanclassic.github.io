@@ -1,0 +1,231 @@
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 900px;
+    height: 35cm;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 110%;
+    margin-bottom: 2cm;
+    background: #c5c5c5;
+}
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.content {
+    padding-bottom: 3cm;
+    margin-top: -5px;
+}
+
+#d, #e, #f,
+#g, #h, #i,
+#j, #k, #l {
+    width: 20%;
+    margin: 0 15px;
+}
+
+#e {
+    width: 22%;
+}
+
+#f {
+    width: 15%;
+    margin-top: 3%;
+    margin-left: 7%;
+    border-radius: 15%;
+}
+
+#g {
+    background: lightblue;
+    border-radius: 10%;
+    width: 12%;
+    margin-right: 3%;
+}
+
+#i, #j {
+    margin: 10% 0 0 0%;
+}
+
+.timeline ul li:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: salmon;
+    border-radius: 50%;
+    box-shadow: none;
+    transition: .5s;
+}
+
+.timeline ul li:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    background: salmon;
+    border-radius: 50%;
+    box-shadow: none;
+    transition: .5s;
+}
+
+
+.timeline ul li h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.timeline ul li:nth-child(odd) h3 {
+    color: darksalmon;
+    transition: .5s;
+}
+
+.timeline ul li:nth-child(even) h3 {
+    color: darksalmon;
+    transition: .5s;
+}
+
+.timeline ul li p {
+    margin: 10px 0 0;
+    padding: 0;
+    color: lavender;
+}
+
+.timeline ul li .time h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 12px;
+    right: -130px;
+    margin: 5px;
+    padding: 5px 15px;
+    background: brown;
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, .3);
+    cursor: pointer;
+}
+
+.timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 12px;
+    left: -130px;
+    margin: 5px;
+    padding: 5px 15px;
+    background: brown;
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, .3);
+    cursor: pointer;
+}
+
+
+
+
+/* ================================= MEDIA QUERIES ================================== */
+
+
+@media (max-width: 767px)
+{
+    .timeline {
+        display: block;
+    }
+
+    .grid {
+        display: none;
+    }
+
+    h1 
+    {
+        text-align: center;
+        font-size: 40px;
+        padding: 0 20px;
+    }
+
+    .timeline 
+    {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .timeline:before
+    {
+        left: 20px;
+    }
+
+    .timeline ul li h3
+    {
+        font-size: 20px;
+    }
+
+    /* -------------------- ALL -------------------- */
+    
+    .timeline ul li:nth-child(odd),
+    .timeline ul li:nth-child(even) {
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+        padding-bottom: 50px;
+        top: 2cm;
+    }
+
+    .timeline ul li:nth-child(odd)::before,
+    .timeline ul li:nth-child(even)::before {
+        top: -18px;
+        left: 16px;
+    }
+
+    .timeline ul li:nth-child(odd) .content,
+    .timeline ul li:nth-child(even) .content {
+        margin-left: 5px;
+        margin-bottom: 15%;
+        padding-bottom: 4em;
+        font-size: 10px;
+    }
+
+    .timeline ul li:nth-child(odd) .time,
+    .timeline ul li:nth-child(even) .time {
+        top: -30px;
+        left: 50px;
+        right: inherit;
+    }
+}

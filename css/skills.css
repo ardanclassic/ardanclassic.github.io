@@ -110,49 +110,6 @@ body {
     transition-delay: 0s;
 }
 
-.share ul.active li:nth-child(2) {
-    top: -100%;
-    left: 0;
-    transition-delay: 0.2s;
-}
-
-.share ul.active li:nth-child(3) {
-    top: -100%;
-    left: 100%;
-    transition-delay: 0.4s;
-}
-
-.share ul.active li:nth-child(4) {
-    top: 0;
-    left: 100%;
-    transition-delay: 0.6s;
-}
-
-.share ul.active li:nth-child(5) {
-    top: 100%;
-    left: 100%;
-    transition-delay: 0.8s;
-}
-
-.share ul.active li:nth-child(6) {
-    top: 100%;
-    left: 0;
-    transition-delay: 1s;
-}
-
-.share ul.active li:nth-child(7) {
-    top: 100%;
-    left: -100%;
-    transition-delay: 1.2s;
-}
-
-.share ul.active li:nth-child(8) {
-    top: 0;
-    left: -100%;
-    transition-delay: 1.4s;
-}
-
-
 /* ---------------------------------------- GRID CONCEPT ----------------------------------- */
 
 #content {
@@ -234,11 +191,22 @@ body {
 }
 
 .layer1 {
-    
+    position: relative;
     top: -630px;
     left: 0px;
-    width: 313px;
+    width: auto;
     height: 100%;
+}
+
+#a, #b {
+    width: 50%;
+    margin-top: 10%;
+}
+
+#c {
+    width: 35%;
+    border-radius: 20px;
+    margin-top: 20%;
 }
 
 /* ----------------------------------- BOX TWO ------------------------------------- */
@@ -357,4 +325,9 @@ body {
     left: 0px;
     width: auto;
     height: 100%;
+}
+
+
+.timeline {
+    display: none;
 }
